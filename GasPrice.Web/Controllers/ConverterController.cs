@@ -36,7 +36,7 @@ namespace GasPrice.Web.Controllers
                 HttpClient client = new HttpClient();
                 client.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY",
                     string.IsNullOrWhiteSpace(CMC_PRO_API_KEY) ?
-                            Environment.GetEnvironmentVariable("CMC_PRO_API_KEY") :
+                            ConfigurationManager.AppSettings["CMC_PRO_API_KEY"] :
                             CMC_PRO_API_KEY);
 
                 var r = client.GetStreamAsync("https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=1,3626,3701").Result;
