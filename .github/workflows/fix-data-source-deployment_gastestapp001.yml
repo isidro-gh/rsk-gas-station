@@ -27,7 +27,7 @@ jobs:
 
       - name: Publish to folder
         # run: msbuild /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="\published\"
-        run: msbuild /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="\published\" 
+        run: msbuild /nologo /verbosity:d /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="\published\" 
         # /p:OutputPath=c:\sandbox\deploytesting\siteA /p:OutDir=c:\sandbox\deploytesting\siteA 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
