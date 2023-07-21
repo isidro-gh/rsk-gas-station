@@ -30,7 +30,7 @@ namespace GasPrice.Data.Services
         {
             var c = new WebClient();
             // c.Headers.Add("X-CMC_PRO_API_KEY", ConfigurationManager.AppSettings["CMC_PRO_API_KEY"]);
-            c.Headers.Add("X-CMC_PRO_API_KEY", Environment.GetEnvironmentVariable("CMC_PRO_API_KEY"));
+            c.Headers.Add("X-CMC_PRO_API_KEY", "94e4cdb8-827c-4749-969b-6e5e3e1eebd6");
 
             var cmcProApiKey = Environment.GetEnvironmentVariable("CMC_PRO_API_KEY");
             Console.WriteLine($"CMC_PRO_API_KEY: {cmcProApiKey}");  
